@@ -23,12 +23,25 @@
             $("#user_add").click(function(){
                 $("iframe").attr("src","/account/redirect/user_add");
             });
-            // 新增订单管理相关点击事件
             $("#order_manage_query").click(function(){
                 $("iframe").attr("src","/account/redirect/order_manage_query");
             });
             $("#order_manage_add").click(function(){
                 $("iframe").attr("src","/account/redirect/order_manage_add");
+            });
+            // 新增餐厅管理相关点击事件
+            $("#restaurant_manage").click(function(){
+                $("iframe").attr("src","/account/redirect/restaurant_manage");
+            });
+            $("#restaurant_add").click(function(){
+                $("iframe").attr("src","/account/redirect/restaurant_add");
+            });
+            // 新增配送员管理相关点击事件
+            $("#delivery_manage").click(function(){
+                $("iframe").attr("src","/account/redirect/delivery_manage");
+            });
+            $("#delivery_add").click(function(){
+                $("iframe").attr("src","/account/redirect/delivery_add");
             });
         })
     </script>
@@ -77,6 +90,22 @@
                         <dl class="layui-nav-child">
                             <dd><a id="order_manage_query" href="javascript:void(0)">查询订单</a></dd>
                             <dd><a id="order_manage_add" href="javascript:void(0)">增加订单</a></dd>
+                        </dl>
+                    </li>
+                    <!-- 新增餐厅管理模块 -->
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">餐厅管理</a>
+                        <dl class="layui-nav-child">
+                            <dd><a id="restaurant_manage" href="javascript:void(0)">查询餐厅</a></dd>
+                            <dd><a id="restaurant_add" href="javascript:void(0)">增加餐厅</a></dd>
+                        </dl>
+                    </li>
+                    <!-- 新增配送员管理模块 -->
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">配送员管理</a>
+                        <dl class="layui-nav-child">
+                            <dd><a id="delivery_manage" href="javascript:void(0)">查询配送员</a></dd>
+                            <dd><a id="delivery_add" href="javascript:void(0)">增加配送员</a></dd>
                         </dl>
                     </li>
                 </ul>

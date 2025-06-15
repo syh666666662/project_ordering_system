@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c32aaf95-cbe9-48e6-a681-4744321686ee" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c32aaf95-cbe9-48e6-a681-4744321686ee" name="更改" comment="订单管理前端">
       <change beforePath="$PROJECT_DIR$/clientfeign/src/main/resources/static/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientfeign/src/main/resources/static/menu_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/menu_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientfeign/target/classes/static/menu_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientfeign/target/classes/static/menu_add.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.AccountApplication" />
-        <item itemvalue="Spring Boot.MenuApplication" />
-        <item itemvalue="Spring Boot.ClientFeignApplication" />
-        <item itemvalue="Spring Boot.OrderApplication" />
         <item itemvalue="Spring Boot.UserApplication" />
+        <item itemvalue="Spring Boot.OrderApplication" />
+        <item itemvalue="Spring Boot.AccountApplication" />
+        <item itemvalue="Spring Boot.ClientFeignApplication" />
+        <item itemvalue="Spring Boot.MenuApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -177,11 +173,24 @@
       <workItem from="1749955470138" duration="227000" />
       <workItem from="1749955699959" duration="226000" />
       <workItem from="1749955929121" duration="76000" />
-      <workItem from="1749956007211" duration="4708000" />
+      <workItem from="1749956007211" duration="5798000" />
     </task>
+    <task id="LOCAL-00001" summary="订单管理前端">
+      <option name="closed" value="true" />
+      <created>1749963616653</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749963616653</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="订单管理前端" />
+    <option name="LAST_COMMIT_MESSAGE" value="订单管理前端" />
   </component>
 </project>
