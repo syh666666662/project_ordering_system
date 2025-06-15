@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加配送员</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+</head>
+<body>
+<div class="layui-container" style="margin-top: 50px; width: 600px;">
+    <form class="layui-form" action="/delivery/save" method="post">
+        <!-- 配送员姓名输入 -->
+        <div class="layui-form-item">
+            <label class="layui-form-label">配送员姓名</label>
+            <div class="layui-input-inline">
+                <input type="text" name="name" lay-verify="required" autocomplete="off" placeholder="请输入配送员姓名" class="layui-input">
+            </div>
+        </div>
+        <!-- 联系电话输入 -->
+        <div class="layui-form-item">
+            <label class="layui-form-label">联系电话</label>
+            <div class="layui-input-inline">
+                <input type="text" name="phone" lay-verify="required|phone" autocomplete="off" placeholder="请输入联系电话" class="layui-input">
+            </div>
+        </div>
+        <!-- 状态选择 -->
+        <div class="layui-form-item">
+            <label class="layui-form-label">状态</label>
+            <div class="layui-input-inline">
+                <select name="status" lay-verify="required">
+                    <option value="">请选择状态</option>
+                    <option value="1">在线</option>
+                    <option value="0">离线</option>
+                </select>
+            </div>
+        </div>
+        <!-- 提交按钮 -->
+        <div class="layui-form-item">
+            <button class="layui-btn" lay-submit lay-filter="deliverySubmit" style="margin-left: 160px;">提交</button>
+        </div>
+    </form>
+</div>
+<script src="/layui/layui.js" charset="utf-8"></script>
+<script>
+    layui.use(['form', 'layer'], function(){
+        var form = layui.form;
+        var layer = layui.layer;
+
+        // 自定义电话验证规则
+        form.verify({
+            phone: [
+                /^1[3-9]\d{9}$/
+                ,'请输入正确的手机号码'
+            ]
+        });
+
+        // 监听表单提交事件
+        form.on('submit(deliverySubmit)', function(data){
+            // 可在此处添加提交前的额外逻辑
+            return true; // 提交表单
+        });
+    });
+</script>
+</body>
+</html>
