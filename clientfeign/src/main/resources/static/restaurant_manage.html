@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>餐厅管理</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+</head>
+<body class="layui-layout-body">
+<div class="layui-container" style="margin-top: 50px; width: 1000px;">
+    <table class="layui-hide" id="restaurantTable" style="width: 100%" lay-filter="restaurantTable"></table>
+    <script type="text/html" id="restaurantBarDemo">
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+    </script>
+    <script src="/layui/layui.js" charset="utf-8"></script>
+    <script>
+        layui.use('table', function(){
+            var table = layui.table;
+
+            table.render({
+                elem: '#restaurantTable'
+                ,url: '/restaurant/findAll' // 替换为实际的餐厅查询接口
+                ,title: '餐厅列表'
+                ,cols: [
+                    [
+                        {field: 'id', width: 70, title: '餐厅编号', sort: true}
+                        ,{field: 'name', width: 200, title: '餐厅名称'}
+                        ,{field: 'address', width: 300, title: '餐厅地址'}
+                        ,{field: 'phone', width: 150, title: '联系电话'}
+                        ,{fixed: 'right', title: '操作', toolbar: '#restaurantBarDemo', width: 80}
+                    ]
+                ]
+                ,page: true
+            });
+
+            // 监听行工具事件
+            table.on('tool(restaurantTable)', function(obj){
+                var data = obj.data;
+                if(obj.event === 'del'){
+                    layer.confirm('确定要删除该餐厅吗？', function(index){
+                        window.location.href = "/restaurant/deleteById/" + data.id;
+                        layer.close(index);
+                    });
+                }
+            });
+        });
+    </script>
+</div>
+
+</body>
+</html>

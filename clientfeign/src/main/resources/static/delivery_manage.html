@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>配送员管理</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+</head>
+<body class="layui-layout-body">
+<div class="layui-container" style="margin-top: 50px; width: 1000px;">
+    <table class="layui-hide" id="deliveryTable" style="width: 100%" lay-filter="deliveryTable"></table>
+    <script type="text/html" id="deliveryBarDemo">
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+    </script>
+    <script src="/layui/layui.js" charset="utf-8"></script>
+    <script>
+        layui.use('table', function(){
+            var table = layui.table;
+
+            table.render({
+                elem: '#deliveryTable'
+                ,url: '/delivery/findAll' // 替换为实际的配送员查询接口
+                ,title: '配送员列表'
+                ,cols: [
+                    [
+                        {field: 'id', width: 70, title: '配送员编号', sort: true}
+                        ,{field: 'name', width: 150, title: '配送员姓名'}
+                        ,{field: 'phone', width: 150, title: '联系电话'}
+                        ,{field: 'status', width: 100, title: '状态'}
+                        ,{fixed: 'right', title: '操作', toolbar: '#deliveryBarDemo', width: 80}
+                    ]
+                ]
+                ,page: true
+            });
+
+            // 监听行工具事件
+            table.on('tool(deliveryTable)', function(obj){
+                var data = obj.data;
+                if(obj.event === 'del'){
+                    layer.confirm('确定要删除该配送员吗？', function(index){
+                        window.location.href = "/delivery/deleteById/" + data.id;
+                        layer.close(index);
+                    });
+                }
+            });
+        });
+    </script>
+</div>
+
+</body>
+</html>

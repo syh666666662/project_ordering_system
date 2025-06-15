@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c32aaf95-cbe9-48e6-a681-4744321686ee" name="更改" comment="配送员管理前端和餐厅管理前端">
-      <change afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/order_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/order_manage.html" afterDir="false" />
+    <list default="true" id="c32aaf95-cbe9-48e6-a681-4744321686ee" name="更改" comment="订单管理前端细节">
+      <change afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/delivery_add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/delivery_manage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/order_manage_add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/order_manage_query.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/restaurant_add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/restaurant_manage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientfeign/src/main/resources/static/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientfeign/src/main/resources/static/order_add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientfeign/src/main/resources/static/order_manage.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +182,7 @@
       <workItem from="1749955470138" duration="227000" />
       <workItem from="1749955699959" duration="226000" />
       <workItem from="1749955929121" duration="76000" />
-      <workItem from="1749956007211" duration="6681000" />
+      <workItem from="1749956007211" duration="8058000" />
     </task>
     <task id="LOCAL-00001" summary="订单管理前端">
       <option name="closed" value="true" />
@@ -192,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749964218493</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="订单管理前端细节">
+      <option name="closed" value="true" />
+      <created>1749965213172</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749965213172</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +217,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="订单管理前端" />
     <MESSAGE value="配送员管理前端和餐厅管理前端" />
-    <option name="LAST_COMMIT_MESSAGE" value="配送员管理前端和餐厅管理前端" />
+    <MESSAGE value="订单管理前端细节" />
+    <option name="LAST_COMMIT_MESSAGE" value="订单管理前端细节" />
   </component>
 </project>
