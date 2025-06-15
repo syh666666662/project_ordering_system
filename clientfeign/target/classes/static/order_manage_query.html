@@ -28,8 +28,8 @@
                     username: '张三',
                     price: '38.00',
                     flavor: '微辣',
-                    type: {
-                        name: '中餐'
+                    status: {
+                        name: '已支付'
                     }
                 },
                 {
@@ -37,8 +37,8 @@
                     username: '李四',
                     price: '25.50',
                     flavor: '中辣',
-                    type: {
-                        name: '西餐'
+                    status: {
+                        name: '待配送'
                     }
                 },
                 {
@@ -46,8 +46,8 @@
                     username: '王五',
                     price: '42.00',
                     flavor: '不辣',
-                    type: {
-                        name: '日料'
+                    status: {
+                        name: '配送中'
                     }
                 },
                 {
@@ -55,8 +55,8 @@
                     username: '赵六',
                     price: '18.00',
                     flavor: '特辣',
-                    type: {
-                        name: '快餐'
+                    status: {
+                        name: '已完成'
                     }
                 },
                 {
@@ -64,8 +64,8 @@
                     username: '钱七',
                     price: '30.00',
                     flavor: '微辣',
-                    type: {
-                        name: '火锅'
+                    status: {
+                        name: '已取消'
                     }
                 },
                 {
@@ -73,8 +73,8 @@
                     username: '孙八',
                     price: '55.00',
                     flavor: '中辣',
-                    type: {
-                        name: '烧烤'
+                    status: {
+                        name: '待支付'
                     }
                 },
                 {
@@ -82,8 +82,8 @@
                     username: '周九',
                     price: '22.00',
                     flavor: '不辣',
-                    type: {
-                        name: '甜品'
+                    status: {
+                        name: '已退款'
                     }
                 }
             ];
@@ -95,11 +95,22 @@
                 cols: [
                     [
                         {field:'id', width:100, title: '编号', sort: true},
-                        {field:'username', width:200, title: '下单用户'},
+                        {field:'username', width:150, title: '下单用户'},
                         {field:'price', width:100, title: '价格'},
                         {field:'flavor', width:100, title: '口味'},
-                        {field:'tid', width:100, title: '分类', templet: function(data){
-                                return data.type.name;
+                        {field:'status', width:120, title: '订单状态', templet: function(data){
+                                // 根据状态添加不同颜色
+                                var color = '';
+                                switch(data.status.name) {
+                                    case '已支付': color = 'green'; break;
+                                    case '待配送': color = 'orange'; break;
+                                    case '配送中': color = 'blue'; break;
+                                    case '已完成': color = 'gray'; break;
+                                    case '已取消': color = 'red'; break;
+                                    case '待支付': color = 'yellow'; break;
+                                    case '已退款': color = 'red'; break;
+                                }
+                                return '<span style="color:'+color+'">'+data.status.name+'</span>';
                             }},
                         {fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
                     ]
