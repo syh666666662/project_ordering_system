@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增订单</title>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+</head>
+<body>
+<div class="layui-container" style="margin-top: 50px; width: 600px;">
+    <form class="layui-form" action="/order/save" method="post">
+        <!-- 用户 ID 输入 -->
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户 ID</label>
+            <div class="layui-input-inline">
+                <input type="text" name="userId" lay-verify="required" autocomplete="off" placeholder="请输入用户 ID" class="layui-input">
+            </div>
+        </div>
+        <!-- 餐厅 ID 输入 -->
+        <div class="layui-form-item">
+            <label class="layui-form-label">餐厅 ID</label>
+            <div class="layui-input-inline">
+                <input type="text" name="restaurantId" lay-verify="required" autocomplete="off" placeholder="请输入餐厅 ID" class="layui-input">
+            </div>
+        </div>
+        <!-- 配送员 ID 输入 -->
+        <div class="layui-form-item">
+            <label class="layui-form-label">配送员 ID</label>
+            <div class="layui-input-inline">
+                <input type="text" name="deliveryId" lay-verify="required" autocomplete="off" placeholder="请输入配送员 ID" class="layui-input">
+            </div>
+        </div>
+        <!-- 订单总价输入 -->
+        <div class="layui-form-item">
+            <label class="layui-form-label">订单总价</label>
+            <div class="layui-input-inline">
+                <input type="text" name="totalPrice" lay-verify="required|price" autocomplete="off" placeholder="请输入订单总价" class="layui-input">
+            </div>
+        </div>
+        <!-- 订单状态选择 -->
+        <div class="layui-form-item">
+            <label class="layui-form-label">订单状态</label>
+            <div class="layui-input-inline">
+                <select name="status" lay-verify="required">
+                    <option value="">请选择订单状态</option>
+                    <option value="1">待处理</option>
+                    <option value="2">已处理</option>
+                    <option value="3">配送中</option>
+                    <option value="4">已完成</option>
+                    <option value="5">已取消</option>
+                </select>
+            </div>
+        </div>
+        <!-- 提交按钮 -->
+        <div class="layui-form-item">
+            <button class="layui-btn" lay-submit lay-filter="orderSubmit" style="margin-left: 160px;">提交</button>
+        </div>
+    </form>
+</div>
+<script src="/layui/layui.js" charset="utf-8"></script>
+<script>
+    layui.use(['form', 'layer'], function(){
+        var form = layui.form;
+        var layer = layui.layer;
+
+        // 自定义价格验证规则
+        form.verify({
+            price: [
+                /(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/
+                ,'请输入正确的价格，最多保留两位小数'
+            ]
+        });
+
+        // 监听表单提交事件
+        form.on('submit(orderSubmit)', function(data){
+            // 可在此处添加提交前的额外逻辑
+            return true; // 提交表单
+        });
+    }); // 补充缺失的右括号
+</script>
+</body>
+</html>
