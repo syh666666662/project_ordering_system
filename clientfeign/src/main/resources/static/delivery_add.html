@@ -1,64 +1,60 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>添加配送员</title>
-    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" th:href="@{/layui/css/layui.css}" media="all">
 </head>
 <body>
-<div class="layui-container" style="margin-top: 50px; width: 600px;">
-    <form class="layui-form" action="/delivery/save" method="post">
-        <!-- 配送员姓名输入 -->
-        <div class="layui-form-item">
-            <label class="layui-form-label">配送员姓名</label>
-            <div class="layui-input-inline">
-                <input type="text" name="name" lay-verify="required" autocomplete="off" placeholder="请输入配送员姓名" class="layui-input">
-            </div>
+<div class="layui-container" style="margin-top: 50px;">
+
+  <div class="layui-container" style="width: 500px;height: 330px;padding-top: 60px;">
+    <form class="layui-form" action="/menu/save" method="post">
+      <div class="layui-form-item">
+        <label class="layui-form-label">菜品：</label>
+        <div class="layui-inline">
+          <input type="text" name="name" lay-verify="required" autocomplete="off" placeholder="请输入菜品名称" class="layui-input">
         </div>
-        <!-- 联系电话输入 -->
-        <div class="layui-form-item">
-            <label class="layui-form-label">联系电话</label>
-            <div class="layui-input-inline">
-                <input type="text" name="phone" lay-verify="required|phone" autocomplete="off" placeholder="请输入联系电话" class="layui-input">
-            </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label">单价：</label>
+        <div class="layui-inline">
+          <input type="text" name="price" lay-verify="required" placeholder="请输入单价" autocomplete="off" class="layui-input">
         </div>
-        <!-- 状态选择 -->
-        <div class="layui-form-item">
-            <label class="layui-form-label">状态</label>
-            <div class="layui-input-inline">
-                <select name="status" lay-verify="required">
-                    <option value="">请选择状态</option>
-                    <option value="1">在线</option>
-                    <option value="0">离线</option>
-                </select>
-            </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label">口味：</label>
+        <div class="layui-inline">
+          <input type="text" name="flavor" lay-verify="required" placeholder="请输入口味" autocomplete="off" class="layui-input">
         </div>
-        <!-- 提交按钮 -->
-        <div class="layui-form-item">
-            <button class="layui-btn" lay-submit lay-filter="deliverySubmit" style="margin-left: 160px;">提交</button>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label">分类：</label>
+        <div class="layui-input-inline">
+          <select name="type.id">
+            <option th:each="type:${list}" th:text="${type.name}" th:value="${type.id}"></option>
+          </select>
         </div>
+      </div>
+      <div class="layui-form-item">
+        <button class="layui-btn" lay-submit="" lay-filter="demo2" style="margin-left: 160px;">提交</button>
+      </div>
     </form>
+  </div>
 </div>
-<script src="/layui/layui.js" charset="utf-8"></script>
+<script th:src="@{/layui/layui.js}" charset="utf-8"></script>
 <script>
-    layui.use(['form', 'layer'], function(){
-        var form = layui.form;
-        var layer = layui.layer;
+  layui.use(['form', 'element'], function(){
+    var form = layui.form;
+    var element = layui.element;
 
-        // 自定义电话验证规则
-        form.verify({
-            phone: [
-                /^1[3-9]\d{9}$/
-                ,'请输入正确的手机号码'
-            ]
-        });
-
-        // 监听表单提交事件
-        form.on('submit(deliverySubmit)', function(data){
-            // 可在此处添加提交前的额外逻辑
-            return true; // 提交表单
-        });
+    //自定义验证规则
+    form.verify({
+      price: [/(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/, "请输入正确的价格"]
     });
+
+  });
 </script>
 </body>
 </html>
