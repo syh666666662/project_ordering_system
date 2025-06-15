@@ -18,4 +18,35 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.southwind.RegistryCenterApplication</mainClass> <!-- 替换为你的主类 -->
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <!-- Spring Boot 插件：用于构建可执行 jar -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.7.6</version> <!-- 版本根据你项目依赖调整 -->
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal> <!-- 关键目标：打包成 fat jar -->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
 </project>

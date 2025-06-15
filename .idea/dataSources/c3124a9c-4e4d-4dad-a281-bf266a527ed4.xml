@@ -1011,7 +1011,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <schema id="291" parent="1" name="orderingsystem">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-06-15.01:34:56</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-06-15.15:10:41</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="292" parent="1" name="performance_schema">
@@ -1039,5 +1039,222 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
+    <table id="298" parent="291" name="t_admin">
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb3_general_ci</CollationName>
+    </table>
+    <table id="299" parent="291" name="t_menu">
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb3_general_ci</CollationName>
+    </table>
+    <table id="300" parent="291" name="t_order">
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb3_general_ci</CollationName>
+    </table>
+    <table id="301" parent="291" name="t_type">
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb3_general_ci</CollationName>
+    </table>
+    <table id="302" parent="291" name="t_user">
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb3_general_ci</CollationName>
+    </table>
+    <column id="303" parent="298" name="id">
+      <AutoIncrement>2</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="304" parent="298" name="username">
+      <Position>2</Position>
+      <StoredType>varchar(11)|0s</StoredType>
+    </column>
+    <column id="305" parent="298" name="password">
+      <Position>3</Position>
+      <StoredType>varchar(11)|0s</StoredType>
+    </column>
+    <index id="306" parent="298" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="307" parent="298" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="308" parent="299" name="id">
+      <AutoIncrement>28</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="309" parent="299" name="name">
+      <Position>2</Position>
+      <StoredType>varchar(11)|0s</StoredType>
+    </column>
+    <column id="310" parent="299" name="price">
+      <Position>3</Position>
+      <StoredType>double|0s</StoredType>
+    </column>
+    <column id="311" parent="299" name="flavor">
+      <Position>4</Position>
+      <StoredType>varchar(11)|0s</StoredType>
+    </column>
+    <column id="312" parent="299" name="tid">
+      <Position>5</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <foreign-key id="313" parent="299" name="t_menu_ibfk_1">
+      <ColNames>tid</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>t_type</RefTableName>
+    </foreign-key>
+    <index id="314" parent="299" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="315" parent="299" name="tid">
+      <ColNames>tid</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="316" parent="299" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="317" parent="300" name="id">
+      <AutoIncrement>28</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="318" parent="300" name="uid">
+      <Position>2</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="319" parent="300" name="mid">
+      <Position>3</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="320" parent="300" name="aid">
+      <Position>4</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="321" parent="300" name="date">
+      <Position>5</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <column id="322" parent="300" name="state">
+      <Position>6</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <foreign-key id="323" parent="300" name="t_order_ibfk_1">
+      <ColNames>uid</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>t_user</RefTableName>
+    </foreign-key>
+    <foreign-key id="324" parent="300" name="t_order_ibfk_2">
+      <ColNames>mid</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>t_menu</RefTableName>
+    </foreign-key>
+    <foreign-key id="325" parent="300" name="t_order_ibfk_3">
+      <ColNames>aid</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>t_admin</RefTableName>
+    </foreign-key>
+    <index id="326" parent="300" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="327" parent="300" name="uid">
+      <ColNames>uid</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="328" parent="300" name="mid">
+      <ColNames>mid</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="329" parent="300" name="aid">
+      <ColNames>aid</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="330" parent="300" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="331" parent="301" name="id">
+      <AutoIncrement>6</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="332" parent="301" name="name">
+      <Position>2</Position>
+      <StoredType>varchar(11)|0s</StoredType>
+    </column>
+    <index id="333" parent="301" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="334" parent="301" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="335" parent="302" name="id">
+      <AutoIncrement>6</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="336" parent="302" name="username">
+      <Position>2</Position>
+      <StoredType>varchar(11)|0s</StoredType>
+    </column>
+    <column id="337" parent="302" name="password">
+      <Position>3</Position>
+      <StoredType>varchar(11)|0s</StoredType>
+    </column>
+    <column id="338" parent="302" name="nickname">
+      <Position>4</Position>
+      <StoredType>varchar(11)|0s</StoredType>
+    </column>
+    <column id="339" parent="302" name="gender">
+      <Position>5</Position>
+      <StoredType>varchar(2)|0s</StoredType>
+    </column>
+    <column id="340" parent="302" name="telephone">
+      <Position>6</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="341" parent="302" name="registerdate">
+      <Position>7</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <column id="342" parent="302" name="address">
+      <Position>8</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <index id="343" parent="302" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="344" parent="302" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
   </database-model>
 </dataSource>
