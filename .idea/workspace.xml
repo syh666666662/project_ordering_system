@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c32aaf95-cbe9-48e6-a681-4744321686ee" name="更改" comment="前端细节">
-      <change afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/order_manage_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MarsCodeWorkspaceAppSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MarsCodeWorkspaceAppSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientfeign/src/main/resources/static/delivery_manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/delivery_manage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clientfeign/src/main/resources/static/order_manage_query.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/order_manage_query.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientfeign/src/main/resources/static/restaurant_manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/restaurant_manage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +174,7 @@
       <workItem from="1749955470138" duration="227000" />
       <workItem from="1749955699959" duration="226000" />
       <workItem from="1749955929121" duration="76000" />
-      <workItem from="1749956007211" duration="12369000" />
+      <workItem from="1749956007211" duration="14471000" />
     </task>
     <task id="LOCAL-00001" summary="订单管理前端">
       <option name="closed" value="true" />
@@ -212,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749966262483</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="前端细节">
+      <option name="closed" value="true" />
+      <created>1749970742406</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1749970742406</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
