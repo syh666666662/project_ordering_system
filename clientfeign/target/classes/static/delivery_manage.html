@@ -3,71 +3,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>员工管理</title>
+    <title>Title</title>
     <link rel="stylesheet" th:href="@{/layui/css/layui.css}" media="all">
 </head>
 <body class="layui-layout-body">
-<div class="layui-container" style="margin-top: 50px;width: 900px;">
+<div class="layui-container" style="margin-top: 50px;width: 750px;">
 
-    <div class="layui-row">
-        <div class="layui-col-md12">
-            <button class="layui-btn layui-btn-normal" onclick="window.location.href='/employee/add'">添加员工</button>
-        </div>
-    </div>
-
-    <table class="layui-hide" id="employeeTable" lay-filter="employeeTable"></table>
-
+    <table class="layui-hide" id="test" style="width: 300px" lay-filter="test"></table>
     <script type="text/html" id="barDemo">
         <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
         <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
     </script>
-
     <script th:src="@{/layui/layui.js}" charset="utf-8"></script>
     <script>
-        layui.use(['table', 'layer'], function(){
+        layui.use('table', function(){
             var table = layui.table;
-            var layer = layui.layer;
 
             table.render({
-                elem: '#employeeTable'
-                ,url:'/employee/findAll'
-                ,title: '员工列表'
+                elem: '#test'
+                ,url:'/menu/findAll'
+                ,title: '配送员列表'
                 ,cols: [
                     [
-                        {field:'id', width:80, title: 'ID', sort: true}
-                        ,{field:'name', width:120, title: '姓名'}
-                        ,{field:'username', width:150, title: '用户名'}
-                        ,{field:'phone', width:150, title: '电话'}
-                        ,{field:'role', width:120, title: '角色', templet: function(data){
-                            if(data.role === 1) return '管理员';
-                            if(data.role === 2) return '服务员';
-                            if(data.role === 3) return '厨师';
-                            return '未知';
-                        }}
-                        ,{field:'status', width:100, title: '状态', templet: function(data){
-                            return data.status === 1 ? '在职' : '离职';
-                        }}
-                        ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:150}
+                        {field:'id', width:100, title: '编号', sort: true}
+                        ,{field:'name', width:200, title: '姓名'}
+                        ,{field:'age', width:100, title: '年龄'}
+                        ,{field:'phone', width:100, title: '电话'}
+                        ,{field:'tid',width:100,  title: '等级',templet:function(data){
+                            return data.type.name
+                        }
+                    }
+                        ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
                     ]
                 ]
                 ,page: true
             });
 
             //监听行工具事件
-            table.on('tool(employeeTable)', function(obj){
+            table.on('tool(test)', function(obj){
                 var data = obj.data;
                 if(obj.event === 'del'){
-                    layer.confirm('确定要删除该员工吗？', function(index){
-                        window.location.href="/employee/deleteById/"+data.id;
+                    layer.confirm('确定要删除吗？', function(index){
+                        window.location.href="/menu/deleteById/"+data.id;
                         layer.close(index);
                     });
                 } else if(obj.event === 'edit'){
-                    window.location.href="/employee/findById/"+data.id;
+                    window.location.href="/menu/findById/"+data.id;
                 }
             });
         });
     </script>
 
 </div>
+<script>
+    //二级菜单联动
+    layui.use('element', function(){
+        var element = layui.element;
+
+    });
+</script>
 </body>
 </html>

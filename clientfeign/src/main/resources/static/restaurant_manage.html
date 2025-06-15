@@ -22,14 +22,14 @@
             table.render({
                 elem: '#test'
                 ,url:'/menu/findAll'
-                ,title: '菜单列表'
+                ,title: '餐厅列表'
                 ,cols: [
                     [
                         {field:'id', width:100, title: '编号', sort: true}
-                        ,{field:'name', width:200, title: '菜品'}
-                        ,{field:'price', width:100, title: '单价'}
-                        ,{field:'flavor', width:100, title: '口味'}
-                        ,{field:'tid',width:100,  title: '分类',templet:function(data){
+                        ,{field:'name', width:200, title: '餐厅名称'}
+                        ,{field:'price', width:100, title: '餐厅地址'}
+                        ,{field:'flavor', width:100, title: '联系电话'}
+                        ,{field:'tid',width:100,  title: '等级',templet:function(data){
                             return data.type.name
                         }
                     }

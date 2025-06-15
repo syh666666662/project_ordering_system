@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c32aaf95-cbe9-48e6-a681-4744321686ee" name="更改" comment="前端细节">
-      <change afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/employee_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/employee_manage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/employee_update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientfeign/src/main/resources/static/delivery_add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientfeign/src/main/resources/static/delivery_manage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientfeign/src/main/resources/static/delivery_manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/delivery_manage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clientfeign/src/main/resources/static/order_manage_query.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/order_manage_query.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientfeign/src/main/resources/static/restaurant_manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/restaurant_manage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clientfeign/target/classes/static/delivery_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientfeign/target/classes/static/delivery_add.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clientfeign/target/classes/static/delivery_manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientfeign/target/classes/static/delivery_manage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientfeign/target/classes/static/order_manage_query.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientfeign/target/classes/static/order_manage_query.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/orderingsystem.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/orderingsystem.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +83,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AccountApplication">
+  <component name="RunManager" selected="Spring Boot.ClientFeignApplication">
     <configuration name="AccountApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="account" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.southwind.AccountApplication" />
@@ -157,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ClientFeignApplication" />
         <item itemvalue="Spring Boot.AccountApplication" />
         <item itemvalue="Spring Boot.MenuApplication" />
-        <item itemvalue="Spring Boot.UserApplication" />
         <item itemvalue="Spring Boot.OrderApplication" />
-        <item itemvalue="Spring Boot.ClientFeignApplication" />
+        <item itemvalue="Spring Boot.UserApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +181,7 @@
       <workItem from="1749955929121" duration="76000" />
       <workItem from="1749956007211" duration="14729000" />
       <workItem from="1749986051051" duration="438000" />
-      <workItem from="1749986492868" duration="4870000" />
+      <workItem from="1749986492868" duration="7028000" />
     </task>
     <task id="LOCAL-00001" summary="订单管理前端">
       <option name="closed" value="true" />
@@ -237,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749972769105</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="前端细节">
+      <option name="closed" value="true" />
+      <created>1749992952902</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1749992952902</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
