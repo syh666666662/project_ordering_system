@@ -5,24 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c32aaf95-cbe9-48e6-a681-4744321686ee" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/MarsCodeWorkspaceAppSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientfeign/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/menu/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/orderingsystem.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/orderingsystem.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientfeign/src/main/resources/static/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientfeign/src/main/resources/static/menu_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientfeign/src/main/resources/static/menu_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientfeign/target/classes/static/menu_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/clientfeign/target/classes/static/menu_add.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,6 +36,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -50,7 +50,7 @@
     "Spring Boot.MenuApplication.executor": "Run",
     "Spring Boot.OrderApplication.executor": "Run",
     "Spring Boot.RegistryCenterApplication.executor": "Run",
-    "Spring Boot.UserApplication.executor": "Debug",
+    "Spring Boot.UserApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/Users/sunyihan/Desktop/project/orderingsystem",
     "node.js.detected.package.eslint": "true",
@@ -81,7 +81,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserApplication">
+  <component name="RunManager" selected="Spring Boot.ClientFeignApplication">
     <configuration name="AccountApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="account" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.southwind.AccountApplication" />
@@ -149,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.UserApplication" />
-        <item itemvalue="Spring Boot.OrderApplication" />
+        <item itemvalue="Spring Boot.AccountApplication" />
         <item itemvalue="Spring Boot.MenuApplication" />
         <item itemvalue="Spring Boot.ClientFeignApplication" />
-        <item itemvalue="Spring Boot.AccountApplication" />
+        <item itemvalue="Spring Boot.OrderApplication" />
+        <item itemvalue="Spring Boot.UserApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +173,11 @@
       <option name="presentableId" value="Default" />
       <updated>1749909698862</updated>
       <workItem from="1749909700550" duration="892000" />
-      <workItem from="1749949192647" duration="4410000" />
+      <workItem from="1749949192647" duration="5301000" />
+      <workItem from="1749955470138" duration="227000" />
+      <workItem from="1749955699959" duration="226000" />
+      <workItem from="1749955929121" duration="76000" />
+      <workItem from="1749956007211" duration="4708000" />
     </task>
     <servers />
   </component>
